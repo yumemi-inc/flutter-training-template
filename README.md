@@ -6,3 +6,6 @@
 
 天気予報アプリを開発していただきます。
 
+## Session
+
+1. [Layout](docs/sessions/layout.md)
