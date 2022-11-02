@@ -32,6 +32,6 @@ See [yumemi_weather_example.dart] for details.
 
 <!-- Links -->
 
-[yumemi-inc/flutter-training]: https://github.com/yumemi-inc/flutter-training
+[yumemi-inc/flutter-training]: ../../README.md
 
-[yumemi_weather_example.dart]: https://github.com/yumemi-inc/flutter-training/tree/main/example/yumemi_weather_example.dart
+[yumemi_weather_example.dart]: example/yumemi_weather_example.dart
