@@ -7,6 +7,7 @@ A package that be used in [yumemi-inc/flutter-training] for getting pseudo weath
 Add this package to your dependencies in `pubspec.yaml`:
 
 ```yaml
+# https://dart.dev/tools/pub/dependencies#git-packages
 dependencies:
   yumemi_weather:
     git:
