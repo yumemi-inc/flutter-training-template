@@ -1,16 +1,57 @@
+import 'dart:convert';
+
 import 'package:yumemi_weather/yumemi_weather.dart';
 import 'package:test/test.dart';
 
 void main() {
-  group('A group of tests', () {
-    final awesome = Awesome();
+  final yumemiWeather = YumemiWeather();
 
-    setUp(() {
-      // Additional setup goes here.
+  test('Simple Ver Test', () {
+    for (final _ in List.generate(100, (index) => index)) {
+      final simpleVer = yumemiWeather.fetchSimpleWeather();
+      expect(simpleVer, anyOf('sunny', 'cloudy', 'rainy'));
+    }
+  });
+
+  test('Throws Ver Test', () {
+    for (final _ in List.generate(100, (index) => index)) {
+      try {
+        final simpleVer = yumemiWeather.fetchSimpleWeather();
+        expect(simpleVer, anyOf('sunny', 'cloudy', 'rainy'));
+      } catch (e) {
+        expect(e, YumemiWeatherError.unknown);
+      }
+    }
+  });
+
+  group('JSON Ver Test', () {
+    test('Success', () {
+      for (final _ in List.generate(100, (index) => index)) {
+        try {
+          final jsonString = '''
+{
+    "area": "tokyo",
+    "date": "2020-04-01T12:00:00+09:00"
+}''';
+          final weatherJson = yumemiWeather.fetchWeather(jsonString);
+          final weather = jsonDecode(weatherJson);
+          expect(
+              weather['weatherCondition'], anyOf('sunny', 'cloudy', 'rainy'));
+          expect(weather['maxTemperature'], inInclusiveRange(10, 40));
+          expect(weather['minTemperature'],
+              inInclusiveRange(-40, weather['maxTemperature']));
+          expect(weather['date'], '2020-04-01T12:00:00+09:00');
+        } on YumemiWeatherError catch (e) {
+          expect(e, YumemiWeatherError.unknown);
+        }
+      }
     });
-
-    test('First Test', () {
-      expect(awesome.isAwesome, isTrue);
+    test('Failure', () {
+      final notJsonString = 'not json';
+      expect(
+        () => yumemiWeather.fetchWeather(notJsonString),
+        throwsA(YumemiWeatherError.invalidParameter),
+      );
     });
   });
 }

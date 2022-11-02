@@ -3,6 +3,4 @@
 /// More dartdocs go here.
 library yumemi_weather;
 
-export 'src/yumemi_weather_base.dart';
-
-// TODO: Export any libraries intended for clients of this package.
+export 'src/yumemi_weather_base.dart' show YumemiWeather, YumemiWeatherError;
