@@ -9,3 +9,4 @@
 ## Session
 
 1. [Layout](docs/sessions/layout.md)
+2. [API](docs/sessions/api.md)
