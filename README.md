@@ -14,3 +14,4 @@
 4. [Mixin](docs/sessions/mixin.md)
 5. [Error](docs/sessions/error.md)
 6. [JSON](docs/sessions/json.md)
+7. [Serialization](docs/sessions/serialization.md)
