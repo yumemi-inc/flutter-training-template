@@ -132,7 +132,7 @@ class YumemiWeather {
   /// with weather forecast information. For example:
   ///
   /// ```dart
-  /// final jsonString = '''
+  /// const jsonString = '''
   /// {
   ///     "area": "tokyo",
   ///     "date": "2020-04-01T12:00:00+09:00"

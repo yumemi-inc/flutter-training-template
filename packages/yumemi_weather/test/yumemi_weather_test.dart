@@ -28,7 +28,7 @@ void main() {
     test('Success', () {
       for (final _ in List.generate(100, (index) => index)) {
         try {
-          final jsonString = '''
+          const jsonString = '''
 {
     "area": "tokyo",
     "date": "2020-04-01T12:00:00+09:00"
