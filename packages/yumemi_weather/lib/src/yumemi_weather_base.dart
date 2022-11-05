@@ -41,9 +41,9 @@ class Response {
     final timeZoneSign = timeZoneOffset.isNegative ? '-' : '+';
     final timeZoneText = '$timeZoneSign${timeZoneOffset.inHours.padLeft(2)}:00';
     return {
-      'weatherCondition': weatherCondition.name,
-      'maxTemperature': maxTemperature,
-      'minTemperature': minTemperature,
+      'weather_condition': weatherCondition.name,
+      'max_temperature': maxTemperature,
+      'min_temperature': minTemperature,
       'date': '${dateText}T$timeText$timeZoneText',
     };
   }
@@ -138,7 +138,7 @@ class YumemiWeather {
   ///     "date": "2020-04-01T12:00:00+09:00"
   /// }''';
   /// final weatherJson = YumemiWeather().fetchWeather(jsonString);
-  /// print(weatherJson); // "{"weatherCondition":"cloudy","maxTemperature":25,"minTemperature":7,"date":"2020-04-01T12:00:00+09:00"}"
+  /// print(weatherJson); // "{"weather_condition":"cloudy","max_temperature":25,"min_temperature":7,"date":"2020-04-01T12:00:00+09:00"}"
   /// ```
   String fetchWeather(String jsonString) {
     final Request request;
