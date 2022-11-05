@@ -13,3 +13,4 @@
 3. [Lifecycle](docs/sessions/lifecycle.md)
 4. [Mixin](docs/sessions/mixin.md)
 5. [Error](docs/sessions/error.md)
+6. [JSON](docs/sessions/json.md)
