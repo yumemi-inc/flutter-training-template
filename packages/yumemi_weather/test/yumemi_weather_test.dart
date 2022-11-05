@@ -28,7 +28,7 @@ void main() {
     test('Success', () {
       for (final _ in List.generate(100, (index) => index)) {
         try {
-          final jsonString = '''
+          const jsonString = '''
 {
     "area": "tokyo",
     "date": "2020-04-01T12:00:00+09:00"
@@ -36,10 +36,10 @@ void main() {
           final weatherJson = yumemiWeather.fetchWeather(jsonString);
           final weather = jsonDecode(weatherJson);
           expect(
-              weather['weatherCondition'], anyOf('sunny', 'cloudy', 'rainy'));
-          expect(weather['maxTemperature'], inInclusiveRange(10, 40));
-          expect(weather['minTemperature'],
-              inInclusiveRange(-40, weather['maxTemperature']));
+              weather['weather_condition'], anyOf('sunny', 'cloudy', 'rainy'));
+          expect(weather['max_temperature'], inInclusiveRange(10, 40));
+          expect(weather['min_temperature'],
+              inInclusiveRange(-40, weather['max_temperature']));
           expect(weather['date'], '2020-04-01T12:00:00+09:00');
         } on YumemiWeatherError catch (e) {
           expect(e, YumemiWeatherError.unknown);
