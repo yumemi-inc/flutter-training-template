@@ -15,3 +15,4 @@
 5. [Error](docs/sessions/error.md)
 6. [JSON](docs/sessions/json.md)
 7. [Serialization](docs/sessions/serialization.md)
+8. [StateManagement](docs/sessions/state_management.md)
