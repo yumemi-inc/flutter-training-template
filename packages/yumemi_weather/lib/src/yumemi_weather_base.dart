@@ -1,4 +1,5 @@
 import 'dart:convert';
+import 'dart:io';
 import 'dart:math';
 
 class Request {
@@ -69,6 +70,8 @@ extension IntExt on int {
     return toString().padLeft(width, padding);
   }
 }
+
+const apiDuration = Duration(seconds: 2);
 
 class YumemiWeather {
   Response _makeRandomResponse({
@@ -155,5 +158,10 @@ class YumemiWeather {
     }
     final response = _makeRandomResponse(date: request.date);
     return jsonEncode(response);
+  }
+
+  String syncFetchWeather(String jsonString) {
+    sleep(apiDuration);
+    return fetchWeather(jsonString);
   }
 }
