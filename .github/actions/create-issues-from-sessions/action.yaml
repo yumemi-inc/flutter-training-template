@@ -1,0 +1,79 @@
+name: "Create issues from sessions"
+description: "Create a GitHub Issue based on sessions of Yumemi Inc. flutter training."
+
+runs:
+  using: "composite"
+
+  steps:
+
+    - uses: peter-evans/create-issue-from-file@v4
+      with:
+        title: Session0
+        content-filepath: docs/sessions/setup.md
+        labels: session
+
+    - uses: peter-evans/create-issue-from-file@v4
+      with:
+        title: Session1
+        content-filepath: docs/sessions/layout.md
+        labels: session
+
+    - uses: peter-evans/create-issue-from-file@v4
+      with:
+        title: Session2
+        content-filepath: docs/sessions/api.md
+        labels: session
+
+    - uses: peter-evans/create-issue-from-file@v4
+      with:
+        title: Session3
+        content-filepath: docs/sessions/lifecycle.md
+        labels: session
+
+    - uses: peter-evans/create-issue-from-file@v4
+      with:
+        title: Session4
+        content-filepath: docs/sessions/mixin.md
+        labels: session
+
+    - uses: peter-evans/create-issue-from-file@v4
+      with:
+        title: Session5
+        content-filepath: docs/sessions/error.md
+        labels: session
+
+    - uses: peter-evans/create-issue-from-file@v4
+      with:
+        title: Session6
+        content-filepath: docs/sessions/json.md
+        labels: session
+
+    - uses: peter-evans/create-issue-from-file@v4
+      with:
+        title: Session7
+        content-filepath: docs/sessions/serialization.md
+        labels: session
+
+    - uses: peter-evans/create-issue-from-file@v4
+      with:
+        title: Session8
+        content-filepath: docs/sessions/state_management.md
+        labels: session
+
+    - uses: peter-evans/create-issue-from-file@v4
+      with:
+        title: Session9
+        content-filepath: docs/sessions/unit_test.md
+        labels: session
+
+    - uses: peter-evans/create-issue-from-file@v4
+      with:
+        title: Session10
+        content-filepath: docs/sessions/widget_test.md
+        labels: session
+
+    - uses: peter-evans/create-issue-from-file@v4
+      with:
+        title: Session11
+        content-filepath: docs/sessions/thread_block.md
+        labels: session
