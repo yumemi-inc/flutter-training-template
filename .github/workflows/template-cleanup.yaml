@@ -1,0 +1,85 @@
+name: Template Cleanup
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+
+  template-cleanup:
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: write
+      issues: write
+
+    timeout-minutes: 10
+
+    if: github.event.repository.name != 'flutter-training-template'
+    steps:
+
+      - name: Fetch sources
+        uses: actions/checkout@v3
+
+      - name: Create issues from sessions
+        uses: .github/actions/create-issues-from-sessions
+
+      - name: Cleanup
+        shell: bash
+        run: |
+          # Make tmp dir and move work dir to tmp
+          mkdir "tmp" && cd tmp || exit
+          
+          # Install fvm
+          brew tap leoafarias/fvm
+          brew install fvm
+          
+          # Install & Setup Flutter
+          flutterLatestVersion=$(fvm releases | grep -o -E "v?[0-9]+\.[0-9]+\.[0-9]+\s+stable" | sed -e "s/[ ]*stable//g")
+          fvm install "$flutterLatestVersion"
+          fvm use "$flutterLatestVersion" --force
+          
+          # Create Flutter Project
+          fvm flutter create \
+            -t app \
+            -i swift \
+            -a kotlin \
+            --platforms ios,android \
+            --org jp.co.yumemi \
+            --project-name flutter_training \
+            .
+          
+          # Add lints to dev_dependencies
+          fvm flutter pub add blendthink_lints --dev
+          
+          # Move work dir to project root
+          cd ..
+          
+          # Copy templates
+          cp -rf .github/templates/ tmp/
+          
+          # Delete anything except tmp dir
+          rm -rf \
+            .github \
+            docs \
+            packages \
+            .gitignore \
+            LICENSE \
+            README.md
+          
+          # Copy new training project to project root
+          cp -rf tmp/ ./
+
+      - name: Commit files
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add .
+          git commit -m "Template cleanup"
+
+      - name: Push changes
+        uses: ad-m/github-push-action@v0.6.0
+        with:
+          branch: main
+          github_token: ${{ secrets.GITHUB_TOKEN }}
