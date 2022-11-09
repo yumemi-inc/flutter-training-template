@@ -47,7 +47,7 @@ Dart には [Mixin] という機能があり、公式パッケージから [Auto
 
 [TextSelectionDelegate]: https://api.flutter.dev/flutter/services/TextSelectionDelegate-mixin.html
 
-[Session3]: lifecycle.md
+[Session3]: 4
 
 [フリー百科事典『ウィキペディア（Wikipedia）』]: https://ja.wikipedia.org/wiki/Mixin
 
