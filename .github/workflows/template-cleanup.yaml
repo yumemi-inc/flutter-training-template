@@ -70,7 +70,7 @@ jobs:
             README.md
           
           # Move new training project to project root
-          mv -f tmp/* ./ && rm -rf tmp
+          mv -f tmp/* tmp/.[^\.]* ./ && rm -rf tmp
 
       - name: Commit files
         run: |
