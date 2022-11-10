@@ -1,0 +1,4 @@
+include: package:blendthink_lints/recommended.yaml
+
+linter:
+  rules:

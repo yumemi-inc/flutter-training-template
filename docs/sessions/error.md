@@ -21,8 +21,8 @@
 
 <!-- Links -->
 
-[yumemi_weather]: ../../packages/yumemi_weather/README.md
+[yumemi_weather]: https://github.com/yumemi-inc/flutter-training-template/blob/main/packages/yumemi_weather/README.md
 
 [AlertDialog]: https://api.flutter.dev/flutter/material/AlertDialog-class.html
 
-[demo]: images/error/demo.gif
+[demo]: https://github.com/yumemi-inc/flutter-training-template/blob/main/docs/sessions/images/error/demo.gif?raw=true

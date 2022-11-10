@@ -27,7 +27,7 @@ Dart の実行モデルはシングルスレッド・イベントループです
 
 [CircularProgressIndicator]: https://api.flutter.dev/flutter/material/CircularProgressIndicator-class.html
 
-[demo]: images/thread_block/demo.gif
+[demo]: https://github.com/yumemi-inc/flutter-training-template/blob/main/docs/sessions/images/thread_block/demo.gif?raw=true
 
 [isolates]: https://dart.dev/guides/language/concurrency#how-isolates-work
 

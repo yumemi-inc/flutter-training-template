@@ -28,14 +28,14 @@ Flutter で SVG を表示するときは、[flutter_svg] を利用すると簡�
 
 <!-- Links -->
 
-[yumemi_weather]: ../../packages/yumemi_weather/README.md
+[yumemi_weather]: https://github.com/yumemi-inc/flutter-training-template/blob/main/packages/yumemi_weather/README.md
 
-[sunny]: images/api/sunny.svg
+[sunny]: https://github.com/yumemi-inc/flutter-training-template/blob/main/docs/sessions/images/api/sunny.svg
 
-[cloudy]: images/api/cloudy.svg
+[cloudy]: https://github.com/yumemi-inc/flutter-training-template/blob/main/docs/sessions/images/api/cloudy.svg
 
-[rainy]: images/api/rainy.svg
+[rainy]: https://github.com/yumemi-inc/flutter-training-template/blob/main/docs/sessions/images/api/rainy.svg
 
-[demo]: images/api/demo.gif
+[demo]: https://github.com/yumemi-inc/flutter-training-template/blob/main/docs/sessions/images/api/demo.gif?raw=true
 
 [flutter_svg]: https://pub.dev/packages/flutter_svg

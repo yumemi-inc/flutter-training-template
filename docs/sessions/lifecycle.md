@@ -34,7 +34,7 @@ iOS・Android と異なる点があるため、きちんと確認しておきま
 
 [Activity]: https://developer.android.com/guide/components/activities/activity-lifecycle
 
-[demo]: images/lifecycle/demo.gif
+[demo]: https://github.com/yumemi-inc/flutter-training-template/blob/main/docs/sessions/images/lifecycle/demo.gif?raw=true
 
 [WidgetsBinding.instance.endOfFrame]: https://api.flutter.dev/flutter/scheduler/SchedulerBinding/endOfFrame.html
 
