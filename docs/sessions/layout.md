@@ -6,27 +6,27 @@
 
 - [Placeholder] の幅は画面の幅の半分
 - 青字と赤字の [Text] の幅は [Placeholder] の幅の半分
-  ![horizontal-ratio](./images/layout/horizontal-ratio.png)
+  ![horizontal-ratio]
 
 - [Placeholder] の高さと幅は同じ
-  ![aspect-ratio](./images/layout/aspect-ratio.png)
+  ![aspect-ratio]
 
 - [Text] の上下に 16 logical pixel のパディング
 - [Text] の文字は `** ℃`
 - [Text] の水平位置は中央
 - [Text] のスタイルは TextTheme の [`labelLarge`]
 - [Text] の色は左が [`Colors.blue`]、右が [`Colors.red`]
-  ![text-padding](./images/layout/text-padding.png)
+  ![text-padding]
 
 - [Placeholder] の水平中央は画面の中央と同じ
 - [Placeholder] と [Text] を合わせた矩形の垂直中央は画面の中央と同じ
-  ![centering](./images/layout/centering.png)
+  ![centering]
 
 - [Text] と [TextButton] の隙間は 80 logical pixel
-  ![button-margin](./images/layout/button-margin.png)
+  ![button-margin]
 
 - [Text] と [TextButton] の水平中央は同じ
-  ![button-centering](./images/layout/button-centering.png)
+  ![button-centering]
 
 ## ヒント
 
@@ -41,6 +41,18 @@ Flutter には iOS の [NSLayoutConstraint] や Android の [ConstraintLayout] �
 - [AspectRatio]
 
 <!-- Links -->
+
+[horizontal-ratio]: https://github.com/yumemi-inc/flutter-training-template/blob/main/docs/sessions/images/layout/horizontal-ratio.png?raw=true
+
+[aspect-ratio]: https://github.com/yumemi-inc/flutter-training-template/blob/main/docs/sessions/images/layout/aspect-ratio.png?raw=true
+
+[text-padding]: https://github.com/yumemi-inc/flutter-training-template/blob/main/docs/sessions/images/layout/text-padding.png?raw=true
+
+[centering]: https://github.com/yumemi-inc/flutter-training-template/blob/main/docs/sessions/images/layout/centering.png?raw=true
+
+[button-margin]: https://github.com/yumemi-inc/flutter-training-template/blob/main/docs/sessions/images/layout/button-margin.png?raw=true
+
+[button-centering]: https://github.com/yumemi-inc/flutter-training-template/blob/main/docs/sessions/images/layout/button-centering.png?raw=true
 
 [Placeholder]: https://api.flutter.dev/flutter/widgets/Placeholder-class.html
 
