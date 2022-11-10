@@ -30,10 +30,6 @@
 
 ### 課題の進め方
 
-[Session0-Setup] は進め方が異なるため、課題をご確認ください。
-
-[Session1-Layout] ~ [Session11-ThreadBlock] の進め方は次の通りです。
-
 1. 課題用のブランチを切って実施
    `session/{#}`
 2. 完了したら Pull Request を作成し、レビュー依頼
