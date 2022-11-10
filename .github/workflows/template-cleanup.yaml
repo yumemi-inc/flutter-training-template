@@ -32,6 +32,7 @@ jobs:
           mkdir "tmp" && cd tmp || exit
           
           # Install fvm
+          eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
           brew tap leoafarias/fvm
           brew install fvm
           
