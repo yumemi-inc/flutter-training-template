@@ -69,8 +69,8 @@ jobs:
             LICENSE \
             README.md
           
-          # Copy new training project to project root
-          cp -rf tmp/ ./
+          # Move new training project to project root
+          mv -f tmp/* ./ && rm -rf tmp
 
       - name: Commit files
         run: |
