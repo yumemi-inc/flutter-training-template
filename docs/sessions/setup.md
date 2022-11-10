@@ -19,4 +19,4 @@
 
 [fvm]: https://fvm.app/
 
-[review-assign.yaml]: https://github.com/yumemi-inc/flutter-training-template/blob/main/.github/workflows/review-assign.yaml
+[review-assign.yaml]: https://github.com/yumemi-inc/flutter-training-template/blob/main/.github/templates/.github/workflows/review-assign.yaml#L8
