@@ -25,6 +25,10 @@ jobs:
       - name: Create issues from sessions
         uses: ./.github/actions/create-issues-from-sessions
 
+      # TODO: After adding a challenge, uncomment.
+      # - name: Create issues from challenges
+      #   uses: ./.github/actions/create-issues-from-challenges
+
       - name: Cleanup
         shell: bash
         run: |
