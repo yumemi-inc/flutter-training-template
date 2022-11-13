@@ -62,7 +62,7 @@ jobs:
           cd ..
           
           # Copy templates
-          cp -rf .github/templates/ tmp/
+          cp -R .github/templates/. tmp
           
           # Delete anything except tmp dir
           rm -rf \
