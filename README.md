@@ -77,6 +77,10 @@ Session1 がレビュー待ちの場合...
 > **Warning**
 > 作成中
 
+## 貢献する方法
+
+[貢献ガイド] をご確認ください。
+
 <!-- Links -->
 
 [templates]: .github/templates
@@ -104,3 +108,5 @@ Session1 がレビュー待ちの場合...
 [Session10-WidgetTest]: docs/sessions/widget_test.md
 
 [Session11-ThreadBlock]: docs/sessions/thread_block.md
+
+[貢献ガイド]: docs/contributing/CONTRIBUTING.md
