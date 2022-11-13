@@ -13,6 +13,7 @@
 - [ ] Flutter の設定（ `fvm flutter doctor` を実行して確認）
 - [ ] Android・iOS でアプリを実行
 - [ ] [review-assign.yaml] の `REVIEWERS` にメンターの GitHub のユーザー名を設定
+- [ ] `.github/workflows-templates` ディレクトリを `.github/workflows` にリネーム
 - [ ] プロジェクトのファイルを一通り見て、不要なコメントを削除
 
 <!-- Links -->
