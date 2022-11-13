@@ -1,0 +1,14 @@
+name: "Create issues from challenges"
+description: "Create a GitHub Issue based on challenges of Yumemi Inc. flutter training."
+
+runs:
+  using: "composite"
+
+  steps:
+
+    # TODO: After adding a challenge, uncomment and modify.
+    # - uses: peter-evans/create-issue-from-file@v4
+    #   with:
+    #     title: Challengexxx
+    #     content-filepath: docs/challenges/xxx.md
+    #     labels: challenge

@@ -1,0 +1,26 @@
+name: Session
+description: 課題の Session に関連する Issue
+title: "[Session]: "
+labels: [ "session" ]
+body:
+  - type: textarea
+    id: current
+    attributes:
+      label: 現状
+      description: 現状がどうなっているか、簡潔に記載してください。
+    validations:
+      required: true
+  - type: textarea
+    id: motivation
+    attributes:
+      label: 動機
+      description: どのようなことを改善したいか記載してください。
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: 提案
+      description: できる限り詳しく記載してください。
+    validations:
+      required: true
