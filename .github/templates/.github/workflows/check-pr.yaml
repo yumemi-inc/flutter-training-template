@@ -61,4 +61,4 @@ jobs:
           name: 'flutter test'
           path: 'test_report.log'
           reporter: 'flutter-json'
-          fail-on-error: 'false'
+          fail-on-error: 'true'
