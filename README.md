@@ -23,6 +23,7 @@
 テンプレートのクリーンワークフローでは次のことをしています。
 
 - 各 Session を Issue に登録
+- 各 Challenge を Issue に登録
 - fvm を利用して、最新安定板の Flutter SDK で Android・iOS 用のプロジェクトを作成
 - lints を導入
 - [templates] 配下のファイルを上書きコピー
@@ -54,7 +55,9 @@ Session1 がレビュー待ちの場合...
 どのような方法をとるかはチームで議論するべきと考えます。
 ただ、この研修は「`rebase` コマンドを使ってみる」ことも研修の一部としています。
 
-## Session
+## 課題
+
+### Session
 
 - [Session0-Setup]
 - [Session1-Layout]
@@ -68,6 +71,11 @@ Session1 がレビュー待ちの場合...
 - [Session9-UnitTest]
 - [Session10-WidgetTest]
 - [Session11-ThreadBlock]
+
+### Challenge
+
+> **Warning**
+> 作成中
 
 <!-- Links -->
 
