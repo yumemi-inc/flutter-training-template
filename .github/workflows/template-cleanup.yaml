@@ -13,6 +13,7 @@ jobs:
     permissions:
       contents: write
       issues: write
+      pull-requests: write
 
     timeout-minutes: 10
 
@@ -76,15 +77,14 @@ jobs:
           # Move new training project to project root
           mv -f tmp/* tmp/.[^\.]* ./ && rm -rf tmp
 
-      - name: Commit files
-        run: |
-          git config --local user.email "action@github.com"
-          git config --local user.name "GitHub Action"
-          git add .
-          git commit -m "Template cleanup"
-
-      - name: Push changes
-        uses: ad-m/github-push-action@v0.6.0
+      - name: Create pull request
+        uses: peter-evans/create-pull-request@v4
         with:
-          branch: main
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.GITHUB_TOKEN }}
+          commit-message: Template cleanup
+          branch: cleanup
+          delete-branch: true
+          title: 'Cleanup templates'
+          body: |
+            Automatically generated PR by [${{ github.workflow }}](https://github.com/${{ github
+            .repository }}/actions/runs/${{ github.run_id }})
