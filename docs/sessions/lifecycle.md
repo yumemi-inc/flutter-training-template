@@ -7,6 +7,7 @@ iOS・Android と異なる点があるため、きちんと確認しておきま
 ## 課題
 
 - [StatefulWidget] を継承した Widget で構築された新しい画面を追加する
+- 新しい画面の背景色は [`Colors.green`] に設定する
 - アプリ起動時に新しい画面に遷移する
 - 新しい画面が表示されたら、0.5 秒後に前回まで作っていた画面に遷移する
 - 前回まで作っていた画面の Close ボタンをタップすると画面を閉じる
@@ -33,6 +34,8 @@ iOS・Android と異なる点があるため、きちんと確認しておきま
 [UIViewController]: https://developer.apple.com/documentation/uikit/uiviewcontroller
 
 [Activity]: https://developer.android.com/guide/components/activities/activity-lifecycle
+
+[`Colors.green`]: https://api.flutter.dev/flutter/material/Colors/green-constant.html
 
 [demo]: https://github.com/yumemi-inc/flutter-training-template/blob/main/docs/sessions/images/lifecycle/demo.gif?raw=true
 
