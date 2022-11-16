@@ -39,6 +39,7 @@ Flutter には iOS の [NSLayoutConstraint] や Android の [ConstraintLayout] �
 - [Flexible]
 - [Expanded]
 - [AspectRatio]
+- [FractionallySizedBox]
 
 <!-- Links -->
 
@@ -79,3 +80,5 @@ Flutter には iOS の [NSLayoutConstraint] や Android の [ConstraintLayout] �
 [Expanded]: https://api.flutter.dev/flutter/widgets/Expanded-class.html
 
 [AspectRatio]: https://api.flutter.dev/flutter/widgets/AspectRatio-class.html
+
+[FractionallySizedBox]: https://api.flutter.dev/flutter/widgets/FractionallySizedBox-class.html
