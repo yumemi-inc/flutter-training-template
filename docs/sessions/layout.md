@@ -41,6 +41,9 @@ Flutter には iOS の [NSLayoutConstraint] や Android の [ConstraintLayout] �
 - [AspectRatio]
 - [FractionallySizedBox]
 
+[Flutter Inspector] を利用すると、レイアウト構造を視覚化でき、より開発しやすくなります。
+便利な機能がたくさんあるので、実際に試しながらしっかり読み込んでおきましょう。
+
 <!-- Links -->
 
 [horizontal-ratio]: https://github.com/yumemi-inc/flutter-training-template/blob/main/docs/sessions/images/layout/horizontal-ratio.png?raw=true
@@ -82,3 +85,5 @@ Flutter には iOS の [NSLayoutConstraint] や Android の [ConstraintLayout] �
 [AspectRatio]: https://api.flutter.dev/flutter/widgets/AspectRatio-class.html
 
 [FractionallySizedBox]: https://api.flutter.dev/flutter/widgets/FractionallySizedBox-class.html
+
+[Flutter Inspector]: https://docs.flutter.dev/development/tools/devtools/inspector
