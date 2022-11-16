@@ -57,6 +57,7 @@ jobs:
           
           # Add lints to dev_dependencies
           fvm flutter pub add blendthink_lints --dev
+          fvm flutter pub remove flutter_lints
           
           # Move work dir to project root
           cd ..
