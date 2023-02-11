@@ -11,7 +11,7 @@ Add this package to your dependencies in `pubspec.yaml`:
 dependencies:
   yumemi_weather:
     git:
-      url: https://github.com/yumemi-inc/flutter-training.git
+      url: https://github.com/yumemi-inc/flutter-training-template.git
       ref: main
       path: packages/yumemi_weather
 ```
