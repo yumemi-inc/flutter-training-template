@@ -1,6 +1,6 @@
 # yumemi_weather
 
-A package that be used in [yumemi-inc/flutter-training] for getting pseudo weather forecast.
+A package that be used in [yumemi-inc/flutter-training-template] for getting pseudo weather forecast.
 
 ## Getting started
 
@@ -32,6 +32,6 @@ See [yumemi_weather_example.dart] for details.
 
 <!-- Links -->
 
-[yumemi-inc/flutter-training]: ../../README.md
+[yumemi-inc/flutter-training-template]: https://github.com/yumemi-inc/flutter-training-template
 
-[yumemi_weather_example.dart]: example/yumemi_weather_example.dart
+[yumemi_weather_example.dart]: https://github.com/yumemi-inc/flutter-training-template/blob/main/packages/yumemi_weather/example/yumemi_weather_example.dart
