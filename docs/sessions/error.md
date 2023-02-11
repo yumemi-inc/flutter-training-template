@@ -21,7 +21,7 @@
 
 <!-- Links -->
 
-[yumemi_weather]: https://github.com/yumemi-inc/flutter-training-template/blob/main/packages/yumemi_weather/README.md
+[yumemi_weather]: https://yumemi-inc.github.io/flutter-training-template/
 
 [AlertDialog]: https://api.flutter.dev/flutter/material/AlertDialog-class.html
 

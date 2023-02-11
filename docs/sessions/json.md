@@ -17,7 +17,7 @@ Dart にはデフォルトで [JSON を変換する仕組み] が用意されて
 
 <!-- Links -->
 
-[yumemi_weather]: https://github.com/yumemi-inc/flutter-training-template/blob/main/packages/yumemi_weather/README.md
+[yumemi_weather]: https://yumemi-inc.github.io/flutter-training-template/
 
 [demo]: https://github.com/yumemi-inc/flutter-training-template/blob/main/docs/sessions/images/json/demo.gif?raw=true
 

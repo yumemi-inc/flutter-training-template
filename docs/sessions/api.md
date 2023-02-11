@@ -28,7 +28,7 @@ Flutter で SVG を表示するときは、[flutter_svg] を利用すると簡�
 
 <!-- Links -->
 
-[yumemi_weather]: https://github.com/yumemi-inc/flutter-training-template/blob/main/packages/yumemi_weather/README.md
+[yumemi_weather]: https://yumemi-inc.github.io/flutter-training-template/
 
 [sunny]: https://github.com/yumemi-inc/flutter-training-template/blob/main/docs/sessions/images/api/sunny.svg
 
