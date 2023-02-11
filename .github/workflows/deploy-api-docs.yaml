@@ -5,7 +5,7 @@ on:
     branches:
       - main
     paths:
-      - '${{ vars.API_PACKAGE_DIR }}/**'
+      - 'packages/yumemi_weather/**'
 
   workflow_dispatch:
 
