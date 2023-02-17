@@ -1,6 +1,6 @@
 # yumemi_weather
 
-A package that be used in [yumemi-inc/flutter-training] for getting pseudo weather forecast.
+A package that be used in [yumemi-inc/flutter-training-template] for getting pseudo weather forecast.
 
 ## Getting started
 
@@ -11,7 +11,7 @@ Add this package to your dependencies in `pubspec.yaml`:
 dependencies:
   yumemi_weather:
     git:
-      url: https://github.com/yumemi-inc/flutter-training.git
+      url: https://github.com/yumemi-inc/flutter-training-template.git
       ref: main
       path: packages/yumemi_weather
 ```
@@ -32,6 +32,6 @@ See [yumemi_weather_example.dart] for details.
 
 <!-- Links -->
 
-[yumemi-inc/flutter-training]: ../../README.md
+[yumemi-inc/flutter-training-template]: https://github.com/yumemi-inc/flutter-training-template
 
-[yumemi_weather_example.dart]: example/yumemi_weather_example.dart
+[yumemi_weather_example.dart]: https://github.com/yumemi-inc/flutter-training-template/blob/main/packages/yumemi_weather/example/yumemi_weather_example.dart

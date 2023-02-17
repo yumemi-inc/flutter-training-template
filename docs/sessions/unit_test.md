@@ -36,7 +36,7 @@ Flutter のテストは次の３つに分類されます。
 
 [Integration tests]: https://docs.flutter.dev/testing#integration-tests
 
-[yumemi_weather]: https://github.com/yumemi-inc/flutter-training-template/blob/main/packages/yumemi_weather/README.md
+[yumemi_weather]: https://yumemi-inc.github.io/flutter-training-template/
 
 [Mockito]: https://docs.flutter.dev/cookbook/testing/unit/mocking
 

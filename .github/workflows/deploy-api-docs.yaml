@@ -1,0 +1,43 @@
+name: Deploy API Docs to Pages
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'packages/yumemi_weather/**'
+
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Setup Dart
+        uses: dart-lang/setup-dart@v1
+      - name: Build
+        run: dart doc --output="${{ vars.API_DOCS_DIR }}"
+        working-directory: ${{ vars.API_PACKAGE_DIR }}
+      - name: Setup Pages
+        uses: actions/configure-pages@v3
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v1
+        with:
+          path: ${{ vars.API_PACKAGE_DIR }}/${{ vars.API_DOCS_DIR }}
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v1

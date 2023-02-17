@@ -1,7 +1,7 @@
 name: yumemi_weather
-description: A package that be used in yumemi-inc/flutter-training for getting pseudo weather forecast.
+description: A package that be used in yumemi-inc/flutter-training-template for getting pseudo weather forecast.
 version: 1.0.0
-homepage: https://github.com/yumemi-inc/flutter-training/tree/main/packages/yumemi_weather
+homepage: https://yumemi-inc.github.io/flutter-training-template/
 
 environment:
   sdk: '>=2.18.2 <3.0.0'

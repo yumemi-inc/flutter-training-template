@@ -14,3 +14,6 @@ pubspec.lock
 
 # JetBrains
 .idea/*
+
+# API Docs
+/gh-pages/
