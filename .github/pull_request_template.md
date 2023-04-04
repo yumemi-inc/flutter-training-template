@@ -10,4 +10,4 @@ close #ISSUE_NUMBER
 
 <!-- Links -->
 
-[貢献ガイド]: ../docs/contributing/CONTRIBUTING.md
+[貢献ガイド]: https://github.com/yumemi-inc/flutter-training-template/blob/main/docs/contributing/CONTRIBUTING.md
