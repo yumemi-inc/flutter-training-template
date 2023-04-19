@@ -43,6 +43,6 @@ iOS・Android と異なる点があるため、きちんと確認しておきま
 
 [Navigator]: https://api.flutter.dev/flutter/widgets/Navigator-class.html
 
-[How do I listen to iOS lifecycle events?]: https://docs.flutter.dev/get-started/flutter-for/ios-devs#how-do-i-listen-to-ios-lifecycle-events
+[How do I listen to iOS lifecycle events?]: https://docs.flutter.dev/get-started/flutter-for/uikit-devs#listening-to-lifecycle-events
 
 [How do I listen to Android activity lifecycle events?]: https://docs.flutter.dev/get-started/flutter-for/android-devs#how-do-i-listen-to-android-activity-lifecycle-events
