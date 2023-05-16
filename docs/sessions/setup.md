@@ -22,8 +22,8 @@
 - [ ] IDE の最新安定板をインストール
 - [ ] Flutter の設定（ `fvm flutter doctor` を実行して確認）
 - [ ] Android・iOS でアプリを実行
-- [ ] [review-assign.yaml] の `REVIEWERS` にメンターの GitHub のユーザー名を設定
 - [ ] `.github/workflows-templates` ディレクトリを `.github/workflows` にリネーム
+- [ ] [review-assign.yaml] の `REVIEWERS` にメンターの GitHub のユーザー名を設定
 
 ## 参考資料
 
@@ -35,7 +35,7 @@
 
 [fvm]: https://fvm.app/
 
-[review-assign.yaml]: https://github.com/yumemi-inc/flutter-training-template/blob/main/.github/templates/.github/workflows/review-assign.yaml#L8
+[review-assign.yaml]: ../blob/main/.github/workflows/review-assign.yaml#L8
 
 [リポジトリの GitHub Actions の設定を管理する]: https://docs.github.com/ja/repositories/managing-your-repositorys-settings-and-features/enabling-features-for-your-repository/managing-github-actions-settings-for-a-repository#allowing-select-actions-and-reusable-workflows-to-run
 
