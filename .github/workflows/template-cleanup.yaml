@@ -48,6 +48,7 @@ jobs:
           # Create Flutter Project
           fvm flutter create \
             -t app \
+            --empty \
             -i swift \
             -a kotlin \
             --platforms ios,android \
