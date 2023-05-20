@@ -35,7 +35,7 @@
 
 [fvm]: https://fvm.app/
 
-[review-assign.yaml]: ../blob/main/.github/workflows/review-assign.yaml#L8
+[review-assign.yaml]: https://github.com/yumemi-inc/flutter-training-template/blob/main/.github/templates/.github/workflows-templates/review-assign.yaml#L8
 
 [リポジトリの GitHub Actions の設定を管理する]: https://docs.github.com/ja/repositories/managing-your-repositorys-settings-and-features/enabling-features-for-your-repository/managing-github-actions-settings-for-a-repository#allowing-select-actions-and-reusable-workflows-to-run
 
