@@ -19,15 +19,16 @@ jobs:
       # https://github.com/kuhnroyal/flutter-fvm-config-action
       - name: Fetch flutter config
         uses: kuhnroyal/flutter-fvm-config-action@v1
+        id: fvm-config-action
 
       # https://github.com/subosito/flutter-action
       - name: Setup flutter
         uses: subosito/flutter-action@v2
         with:
-          flutter-version: ${{ env.FLUTTER_VERSION }}
-          channel: ${{ env.FLUTTER_CHANNEL }}
+          flutter-version: ${{ steps.fvm-config-action.outputs.FLUTTER_VERSION }}
+          channel: ${{ steps.fvm-config-action.outputs.FLUTTER_CHANNEL }}
           cache: true
-          cache-key: ${{ env.FLUTTER_VERSION }}-${{ env.FLUTTER_CHANNEL }}
+          cache-key: ${{ steps.fvm-config-action.outputs.FLUTTER_VERSION }}-${{ steps.fvm-config-action.outputs.FLUTTER_CHANNEL }}
 
       # https://github.com/actions/cache
       - name: Cache dependencies
