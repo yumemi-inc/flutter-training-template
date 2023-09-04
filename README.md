@@ -77,6 +77,12 @@ Session1 がレビュー待ちの場合...
 > **Warning**
 > 作成中
 
+## レビュー観点表
+
+レビューを行う際に困ったときは、↓ のレビュー観点表をご利用ください。
+
+[Flutter 研修課題のレビュー観点表]
+
 ## 貢献する方法
 
 [貢献ガイド] をご確認ください。
@@ -108,5 +114,7 @@ Session1 がレビュー待ちの場合...
 [Session10-WidgetTest]: docs/sessions/widget_test.md
 
 [Session11-ThreadBlock]: docs/sessions/thread_block.md
+
+[Flutter 研修課題のレビュー観点表]: https://notion.yumemi.co.jp/flutter%E7%A0%94%E4%BF%AE%E8%AA%B2%E9%A1%8C%E3%81%AE%E3%83%AC%E3%83%93%E3%83%A5%E3%83%BC%E8%A6%B3%E7%82%B9%E8%A1%A8
 
 [貢献ガイド]: docs/contributing/CONTRIBUTING.md
