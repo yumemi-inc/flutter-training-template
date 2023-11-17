@@ -11,6 +11,7 @@ jobs:
   assign:
     runs-on: ubuntu-latest
     steps:
+      # https://github.com/hkusu/review-assign-action
       - uses: hkusu/review-assign-action@v1
         with:
           assignees: ${{ github.actor }}
