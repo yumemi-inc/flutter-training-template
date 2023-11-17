@@ -25,19 +25,29 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
+      # https://github.com/actions/checkout
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
+
+      # https://github.com/dart-lang/setup-dart
       - name: Setup Dart
         uses: dart-lang/setup-dart@v1
+
       - name: Build
         run: dart doc --output="${{ vars.API_DOCS_DIR }}"
         working-directory: ${{ vars.API_PACKAGE_DIR }}
+
+      # https://github.com/actions/configure-pages
       - name: Setup Pages
         uses: actions/configure-pages@v3
+
+      # https://github.com/actions/upload-pages-artifact
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v1
+        uses: actions/upload-pages-artifact@v2
         with:
           path: ${{ vars.API_PACKAGE_DIR }}/${{ vars.API_DOCS_DIR }}
+
+      # https://github.com/actions/deploy-pages
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v1
+        uses: actions/deploy-pages@v2
