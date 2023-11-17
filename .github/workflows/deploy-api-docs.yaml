@@ -24,6 +24,7 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
+    if: github.event.repository.name == 'flutter-training-template'
     steps:
       # https://github.com/actions/checkout
       - name: Checkout
