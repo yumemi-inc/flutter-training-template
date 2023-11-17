@@ -12,13 +12,13 @@ jobs:
     steps:
       # https://github.com/actions/checkout
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           fetch-depth: 0
 
       # https://github.com/kuhnroyal/flutter-fvm-config-action
       - name: Fetch flutter config
-        uses: kuhnroyal/flutter-fvm-config-action@v1
+        uses: kuhnroyal/flutter-fvm-config-action@v2
         id: fvm-config-action
 
       # https://github.com/subosito/flutter-action
@@ -47,9 +47,11 @@ jobs:
       - name: Install dependencies
         run: flutter pub get
 
-        # https://github.com/blendthink/elixir
+        # https://github.com/invertase/github-action-dart-analyzer
       - name: Report analyze
-        uses: blendthink/elixir@v2
+        uses: invertase/github-action-dart-analyzer@v1
+        with:
+          fatal-infos: true
 
       - name: Run test
         run: flutter test --no-pub --machine > test_report.log
