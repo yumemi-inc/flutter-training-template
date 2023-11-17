@@ -19,8 +19,9 @@ jobs:
     if: github.event.repository.name != 'flutter-training-template'
     steps:
 
+      # https://github.com/actions/checkout
       - name: Fetch sources
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Create issues from sessions
         uses: ./.github/actions/create-issues-from-sessions
@@ -57,8 +58,14 @@ jobs:
             .
           
           # Add lints to dev_dependencies
-          fvm flutter pub add blendthink_lints --dev
+          fvm flutter pub add dev:yumemi_lints
           fvm flutter pub remove flutter_lints
+          
+          # Override the analysis_options.yaml
+          cat <<EOF > analysis_options.yaml
+          # https://pub.dev/packages/yumemi_lints
+          include: package:yumemi_lints/flutter/$flutterLatestVersion/recommended.yaml
+          EOF
           
           # Move work dir to project root
           cd ..
@@ -85,8 +92,9 @@ jobs:
           git add .
           git commit -m "Template cleanup"
 
+      # https://github.com/ad-m/github-push-action
       - name: Push changes
-        uses: ad-m/github-push-action@v0.6.0
+        uses: ad-m/github-push-action@v0.8.0
         with:
           branch: main
           github_token: ${{ secrets.GITHUB_TOKEN }}
