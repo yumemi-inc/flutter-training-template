@@ -18,7 +18,7 @@ jobs:
 
       # https://github.com/kuhnroyal/flutter-fvm-config-action
       - name: Fetch flutter config
-        uses: kuhnroyal/flutter-fvm-config-action@v2
+        uses: kuhnroyal/flutter-fvm-config-action@34c3905bc939a4ff9d9cb07d5a977493fa73b2aa
         id: fvm-config-action
 
       # https://github.com/subosito/flutter-action
