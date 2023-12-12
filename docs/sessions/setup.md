@@ -18,7 +18,7 @@
 - [ ] 使用しているチャットツールで GitHub 通知の購読設定
   - Slackコマンド:
     - `/github subscribe ユーザー名/リポジトリ名 issues pulls reviews comments`
-    - `/github unsubscribe ユーザー名/リポジトリ名 commits releases deployments`
+    - `/github unsubscribe ユーザー名/リポジトリ名 commits releases deployments workflows branches discussions`
 - [ ] 作成した研修用のリポジトリを `git clone [url]` して、ローカルにコピー
 - [ ] [fvm] をインストール
 - [ ] プロジェクトルートで `fvm install` コマンドを実行して対象の Flutter SDK をインストール
