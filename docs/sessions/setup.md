@@ -14,7 +14,6 @@
   - [ ] マージ前にプルリクエスト必須
     - [ ] マージ前に１人の承認を必須
     - [ ] マージ前に会話の解決必須
-  - [ ] マージ前にステータスチェック必須
   - [ ] フォースプッシュを許可しない
 - [ ] 使用しているチャットツールで GitHub 通知の購読設定
   - Slackコマンド:
@@ -28,12 +27,17 @@
 - [ ] Android・iOS でアプリを実行
 - [ ] `.github/workflows-templates` ディレクトリを `.github/workflows` にリネーム
 - [ ] [review-assign.yaml] の `REVIEWERS` にメンターの GitHub のユーザー名を設定
+- [ ] 作成した研修用のリポジトリのルールセットを編集（上２つの修正を行ったプルリクエストマージ後に対応）
+  - [ ] マージ前にステータスチェック必須
+    - [ ] マージ前にブランチ最新化必須
+    - [ ] ステータスチェック `assign` `flutter test` `check` を追加
 
 ## 参考資料
 
 - [コラボレーターを個人リポジトリに招待する]
 - [リポジトリの GitHub Actions の設定を管理する]
 - [ルールセットについて]
+- [ステータスチェックについて]
 - [GitHub + Slack]
 
 <!-- Links -->
@@ -47,5 +51,7 @@
 [リポジトリの GitHub Actions の設定を管理する]: https://docs.github.com/ja/repositories/managing-your-repositorys-settings-and-features/enabling-features-for-your-repository/managing-github-actions-settings-for-a-repository#allowing-select-actions-and-reusable-workflows-to-run
 
 [ルールセットについて]: https://docs.github.com/ja/repositories/configuring-branches-and-merges-in-your-repository/managing-rulesets/about-rulesets
+
+[ステータスチェックについて]: https://docs.github.com/ja/pull-requests/collaborating-with-pull-requests/collaborating-on-repositories-with-code-quality-features/about-status-checks
 
 [GitHub + Slack]: https://slack.github.com
