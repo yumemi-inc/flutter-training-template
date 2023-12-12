@@ -7,7 +7,7 @@ Flutter での状態管理の方法について、公式からいくつか紹介
 
 - [List of state management approaches]
 
-その中で [Provider] が推奨されていますが、[Provider] にあったいくつかの課題を解決した改良版が [Riverpod] です。
+その中で [Provider] が紹介されていますが、[Provider] にあったいくつかの課題を解決した改良版が [Riverpod] です。
 
 [Riverpod] を導入して、状態管理やアーキテクチャを見直してみましょう。
 
@@ -53,10 +53,12 @@ flowchart TB
   weatherUiStateRepositoryProvider ==> fetchWeatherUseCaseProvider;
   weatherForecastPanelUiStateProvider[[weatherForecastPanelUiStateProvider]];
   weatherRepositoryProvider[[weatherRepositoryProvider]];
-  weatherDatastoreProvider ==> weatherRepositoryProvider;
+  weatherDataSourceProvider ==> weatherRepositoryProvider;
   weatherUiStateRepositoryProvider[[weatherUiStateRepositoryProvider]];
-  weatherDatastoreProvider[[weatherDatastoreProvider]];
+  weatherDataSourceProvider[[weatherDataSourceProvider]];
 ```
+
+※ この Provider の依存関係図は [riverpod_graph] を利用して自動生成しました。
 
 ## 参考資料
 
@@ -72,6 +74,8 @@ flowchart TB
 [Riverpod]: https://pub.dev/packages/riverpod
 
 [Different Types of Providers]: https://docs-v2.riverpod.dev/docs/concepts/providers/#different-types-of-providers
+
+[riverpod_graph]: https://github.com/rrousselGit/riverpod/tree/master/packages/riverpod_graph
 
 [Flutterの状態管理手法の選定]: https://medium.com/flutter-jp/state-1daa7fd66b94
 
