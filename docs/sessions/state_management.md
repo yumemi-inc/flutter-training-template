@@ -53,9 +53,9 @@ flowchart TB
   weatherUiStateRepositoryProvider ==> fetchWeatherUseCaseProvider;
   weatherForecastPanelUiStateProvider[[weatherForecastPanelUiStateProvider]];
   weatherRepositoryProvider[[weatherRepositoryProvider]];
-  weatherDatastoreProvider ==> weatherRepositoryProvider;
+  weatherDataSourceProvider ==> weatherRepositoryProvider;
   weatherUiStateRepositoryProvider[[weatherUiStateRepositoryProvider]];
-  weatherDatastoreProvider[[weatherDatastoreProvider]];
+  weatherDataSourceProvider[[weatherDataSourceProvider]];
 ```
 
 ## 参考資料
