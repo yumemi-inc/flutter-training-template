@@ -29,4 +29,4 @@
 
 [Session9]: 10
 
-[Riverpod Testing]: https://docs-v2.riverpod.dev/docs/cookbooks/testing
+[Riverpod Testing]: https://riverpod.dev/docs/essentials/testing

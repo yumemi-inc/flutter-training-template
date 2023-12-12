@@ -73,7 +73,7 @@ flowchart TB
 
 [Riverpod]: https://pub.dev/packages/riverpod
 
-[Different Types of Providers]: https://docs-v2.riverpod.dev/docs/concepts/providers/#different-types-of-providers
+[Different Types of Providers]: https://riverpod.dev/docs/concepts/providers/#different-types-of-providers
 
 [riverpod_graph]: https://github.com/rrousselGit/riverpod/tree/master/packages/riverpod_graph
 
