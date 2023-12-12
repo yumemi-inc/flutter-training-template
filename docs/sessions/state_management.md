@@ -71,7 +71,7 @@ flowchart TB
 
 [Riverpod]: https://pub.dev/packages/riverpod
 
-[Different Types of Providers]: https://docs-v2.riverpod.dev/docs/concepts/providers/#different-types-of-providers
+[Different Types of Providers]: https://riverpod.dev/docs/concepts/providers/#different-types-of-providers
 
 [Flutterの状態管理手法の選定]: https://medium.com/flutter-jp/state-1daa7fd66b94
 

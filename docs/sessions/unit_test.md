@@ -40,4 +40,4 @@ Flutter のテストは次の３つに分類されます。
 
 [Mockito]: https://docs.flutter.dev/cookbook/testing/unit/mocking
 
-[Riverpod Testing]: https://docs-v2.riverpod.dev/docs/cookbooks/testing
+[Riverpod Testing]: https://riverpod.dev/docs/essentials/testing
