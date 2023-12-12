@@ -17,7 +17,9 @@
   - [ ] マージ前にステータスチェック必須
   - [ ] フォースプッシュを許可しない
 - [ ] 使用しているチャットツールで GitHub 通知の購読設定
-  - Slackコマンド: `/github subscribe ユーザー名/リポジトリ名 issues pulls reviews comments`
+  - Slackコマンド:
+    - `/github subscribe ユーザー名/リポジトリ名 issues pulls reviews comments`
+    - `/github unsubscribe ユーザー名/リポジトリ名 commits releases deployments`
 - [ ] 作成した研修用のリポジトリを `git clone [url]` して、ローカルにコピー
 - [ ] [fvm] をインストール
 - [ ] プロジェクトルートで `fvm install` コマンドを実行して対象の Flutter SDK をインストール
