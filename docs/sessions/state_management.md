@@ -7,7 +7,7 @@ Flutter での状態管理の方法について、公式からいくつか紹介
 
 - [List of state management approaches]
 
-その中で [Provider] が推奨されていますが、[Provider] にあったいくつかの課題を解決した改良版が [Riverpod] です。
+その中で [Provider] が紹介されていますが、[Provider] にあったいくつかの課題を解決した改良版が [Riverpod] です。
 
 [Riverpod] を導入して、状態管理やアーキテクチャを見直してみましょう。
 
