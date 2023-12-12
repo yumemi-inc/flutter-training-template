@@ -4,7 +4,7 @@
 
 ## 課題
 
-- [ ] 作成した研修用のリポジトリにメンターを招待して、リポジトリへの書き込みアクセス権を付与
+- [ ] 作成した研修用のリポジトリにメンターをコラボレーターとして招待する
 - [ ] 作成した研修用のリポジトリの GitHub Actions の権限を「Allow all actions and reusable workflows」に設定
 - [ ] 作成した研修用のリポジトリの GitHub Actions のワークフローの権限を「Read and write permissions」に設定
 - [ ] 作成した研修用のリポジトリに `main` ブランチの保護ルールを追加
@@ -28,6 +28,7 @@
 
 ## 参考資料
 
+- [コラボレーターを個人リポジトリに招待する]
 - [リポジトリの GitHub Actions の設定を管理する]
 - [保護されたブランチについて]
 - [GitHub + Slack]
@@ -37,6 +38,8 @@
 [fvm]: https://fvm.app/
 
 [review-assign.yaml]: https://github.com/yumemi-inc/flutter-training-template/blob/main/.github/templates/.github/workflows-templates/review-assign.yaml#L8
+
+[コラボレーターを個人リポジトリに招待する]: https://docs.github.com/ja/account-and-profile/setting-up-and-managing-your-personal-account-on-github/managing-access-to-your-personal-repositories/inviting-collaborators-to-a-personal-repository#inviting-a-collaborator-to-a-personal-repository
 
 [リポジトリの GitHub Actions の設定を管理する]: https://docs.github.com/ja/repositories/managing-your-repositorys-settings-and-features/enabling-features-for-your-repository/managing-github-actions-settings-for-a-repository#allowing-select-actions-and-reusable-workflows-to-run
 
