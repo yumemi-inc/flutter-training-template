@@ -26,6 +26,7 @@ iOS・Android と異なる点があるため、きちんと確認しておきま
 
 - [How do I listen to iOS lifecycle events?]
 - [How do I listen to Android activity lifecycle events?]
+- [‘addPostFrameCallback’ vs. ‘endOfFrame.then’ in WidgetsBinding with Rendering.]
 
 <!-- Links -->
 
@@ -46,3 +47,5 @@ iOS・Android と異なる点があるため、きちんと確認しておきま
 [How do I listen to iOS lifecycle events?]: https://docs.flutter.dev/get-started/flutter-for/uikit-devs#listening-to-lifecycle-events
 
 [How do I listen to Android activity lifecycle events?]: https://docs.flutter.dev/get-started/flutter-for/android-devs#how-do-i-listen-to-android-activity-lifecycle-events
+
+[‘addPostFrameCallback’ vs. ‘endOfFrame.then’ in WidgetsBinding with Rendering.]: https://medium.com/@ahmeddhus/addpostframecallback-vs-endofframe-then-in-widgetsbinding-with-rendering-a8ed5d527669
