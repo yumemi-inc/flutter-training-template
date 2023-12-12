@@ -14,7 +14,7 @@
 - [Text] の上下に 16 logical pixel のパディング
 - [Text] の文字は `** ℃`
 - [Text] の水平位置は中央
-- [Text] のスタイルは TextTheme の [`labelLarge`]
+- [Text] のスタイルは `Theme.of(context).textTheme` で取得してきた `TextTheme` の [`labelLarge`]
 - [Text] の色は左が [`Colors.blue`]、右が [`Colors.red`]
   ![text-padding]
 
