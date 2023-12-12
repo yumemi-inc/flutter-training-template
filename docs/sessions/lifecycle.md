@@ -18,7 +18,7 @@ iOS・Android と異なる点があるため、きちんと確認しておきま
 
 ## ヒント
 
-[WidgetsBinding.instance.endOfFrame] を利用すると、画面の描画が終わってから処理を実行することができます。
+[WidgetsBinding.instance.endOfFrame] を利用すると、画面のレイアウトの計算が終わって描画されはじめたタイミングで処理を実行することができます。
 
 画面遷移は外部パッケージを利用しても問題ありませんが、本課題では [Navigator] の命令型 API を利用すると比較的簡単に実装できます。
 
