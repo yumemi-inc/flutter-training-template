@@ -58,6 +58,8 @@ flowchart TB
   weatherDataSourceProvider[[weatherDataSourceProvider]];
 ```
 
+※ この Provider の依存関係図は [riverpod_graph] を利用して自動生成しました。
+
 ## 参考資料
 
 - [Flutterの状態管理手法の選定]
@@ -72,6 +74,8 @@ flowchart TB
 [Riverpod]: https://pub.dev/packages/riverpod
 
 [Different Types of Providers]: https://docs-v2.riverpod.dev/docs/concepts/providers/#different-types-of-providers
+
+[riverpod_graph]: https://github.com/rrousselGit/riverpod/tree/master/packages/riverpod_graph
 
 [Flutterの状態管理手法の選定]: https://medium.com/flutter-jp/state-1daa7fd66b94
 
