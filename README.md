@@ -115,6 +115,6 @@ Session1 がレビュー待ちの場合...
 
 [Session11-ThreadBlock]: docs/sessions/thread_block.md
 
-[Flutter 研修課題のレビュー観点表]: https://notion.yumemi.co.jp/flutter%E7%A0%94%E4%BF%AE%E8%AA%B2%E9%A1%8C%E3%81%AE%E3%83%AC%E3%83%93%E3%83%A5%E3%83%BC%E8%A6%B3%E7%82%B9%E8%A1%A8
+[Flutter 研修課題のレビュー観点表]: https://yumemi.notion.site/Flutter-555155c98aea49f2bc745bbaff9d6ec7
 
 [貢献ガイド]: docs/contributing/CONTRIBUTING.md
