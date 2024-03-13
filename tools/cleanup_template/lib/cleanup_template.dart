@@ -34,11 +34,11 @@ Future<ExitStatus> run() async {
 }
 
 Future<ExitStatus> cleanupTemplate(ProviderContainer container) async {
-  final sdkService = container.read(flutterSdkServiceProvider);
+  final flutterSdkService = container.read(flutterSdkServiceProvider);
   final cleanupService = container.read(cleanupServiceProvider);
 
   try {
-    final flutterVersion = await sdkService.getLatestFlutterSdkVersion();
+    final flutterVersion = await flutterSdkService.getLatestFlutterSdkVersion();
     final exitStatus = cleanupService.call(flutterVersion);
 
     return exitStatus;
