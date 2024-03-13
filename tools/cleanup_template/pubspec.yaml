@@ -9,6 +9,7 @@ environment:
 # Add regular dependencies here.
 dependencies:
   http: ^1.2.1
+  pub_semver: ^2.1.4
   riverpod: ^2.5.1
   riverpod_annotation: ^2.3.5
   yumemi_lints: ^1.7.0
