@@ -1,3 +1,5 @@
+include: package:yumemi_lints/dart/3.3.0/recommended.yaml
+
 analyzer:
   plugins:
     - custom_lint
