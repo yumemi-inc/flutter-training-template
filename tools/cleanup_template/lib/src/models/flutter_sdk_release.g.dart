@@ -10,10 +10,18 @@ part of 'flutter_sdk_release.dart';
 
 _$FlutterSdkReleaseImpl _$$FlutterSdkReleaseImplFromJson(
         Map<String, dynamic> json) =>
-    _$FlutterSdkReleaseImpl(
-      channel: $enumDecode(_$FlutterChannelEnumMap, json['channel']),
-      version:
-          const _VersionJsonConverter().fromJson(json['version'] as String),
+    $checkedCreate(
+      r'_$FlutterSdkReleaseImpl',
+      json,
+      ($checkedConvert) {
+        final val = _$FlutterSdkReleaseImpl(
+          channel: $checkedConvert(
+              'channel', (v) => $enumDecode(_$FlutterChannelEnumMap, v)),
+          version: $checkedConvert('version',
+              (v) => const _VersionJsonConverter().fromJson(v as String)),
+        );
+        return val;
+      },
     );
 
 Map<String, dynamic> _$$FlutterSdkReleaseImplToJson(
