@@ -2,6 +2,8 @@ import 'dart:io';
 
 import 'package:cleanup_template/src/file_system.dart';
 import 'package:cleanup_template/src/models/exit_status.dart';
+import 'package:cleanup_template/src/services/cleanup_service.dart';
+import 'package:cleanup_template/src/services/flutter_sdk_service.dart';
 import 'package:file/local.dart';
 import 'package:riverpod/riverpod.dart';
 
@@ -31,5 +33,9 @@ Future<ExitStatus> run() async {
 }
 
 Future<ExitStatus> cleanupTemplate(ProviderContainer container) async {
-  return ExitStatus.success;
+  final sdkService = container.read(flutterSdkServiceProvider);
+  final cleanupService = container.read(cleanupServiceProvider);
+
+  final flutterVersion = await sdkService.getLatestFlutterSdkVersion();
+  return  cleanupService.call(flutterVersion);
 }
