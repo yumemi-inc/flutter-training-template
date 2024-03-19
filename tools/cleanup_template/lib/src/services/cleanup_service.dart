@@ -149,7 +149,7 @@ include: package:yumemi_lints/flutter/$flutterVersion/recommended.yaml
         ['-R', '$githubTemplatesPath/.', tempDir.path],
       ).throwExceptionIfFailed();
 
-      // delete anything except tempDir
+      // delete anything except tempDir and toolsDir
       Process.runSync(
         'rm',
         [
