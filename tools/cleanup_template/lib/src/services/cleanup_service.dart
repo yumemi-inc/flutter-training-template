@@ -40,7 +40,7 @@ class CleanupService {
       ),
     );
 
-    final tmpDir = _fileSystem.systemTempDirectory;
+    final tempDir = _fileSystem.systemTempDirectory;
 
     try {
       // install latest flutter sdk and setup
@@ -53,12 +53,12 @@ class CleanupService {
       Process.runSync(
         'fvm',
         ['use', flutterVersion.toString(), '-f'],
-        workingDirectory: tmpDir.path,
+        workingDirectory: tempDir.path,
       ).throwExceptionIfFailed();
 
       // remove .gitignore
       final gitignoreFile =
-          _fileSystem.file(path.join(tmpDir.path, '.gitignore'));
+          _fileSystem.file(path.join(tempDir.path, '.gitignore'));
       gitignoreFile.deleteSync();
 
       // create flutter project
@@ -82,7 +82,7 @@ class CleanupService {
           'flutter_training',
           '.',
         ],
-        workingDirectory: tmpDir.path,
+        workingDirectory: tempDir.path,
       ).throwExceptionIfFailed();
 
       // add .fvm/ to gitignore
@@ -105,7 +105,7 @@ class CleanupService {
           '--dev',
           'yumemi_lints',
         ],
-        workingDirectory: tmpDir.path,
+        workingDirectory: tempDir.path,
       ).throwExceptionIfFailed();
 
       // delete flutter_lints
@@ -117,12 +117,12 @@ class CleanupService {
           'remove',
           'flutter_lints',
         ],
-        workingDirectory: tmpDir.path,
+        workingDirectory: tempDir.path,
       ).throwExceptionIfFailed();
 
       // override analysis_options.yaml
       final analysisOptionsPath = path.join(
-        tmpDir.path,
+        tempDir.path,
         'analysis_options.yaml',
       );
       _fileSystem.file(analysisOptionsPath).writeAsStringSync('''
@@ -130,15 +130,15 @@ class CleanupService {
 include: package:yumemi_lints/flutter/$flutterVersion/recommended.yaml
 ''');
 
-      // copy templates contents to tmpDir
+      // copy templates contents to tempDir
       final rootDirPath = rootDir.path;
       final githubTemplatesPath = path.join(rootDirPath, '.github/templates');
       Process.runSync(
         'cp',
-        ['-R', '$githubTemplatesPath/.', tmpDir.path],
+        ['-R', '$githubTemplatesPath/.', tempDir.path],
       ).throwExceptionIfFailed();
 
-      // Delete anything except tmpDir
+      // Delete anything except tempDir
       Process.runSync('rm', [
         '-rf',
         path.join(rootDir.path, '.gitignore'),
@@ -149,10 +149,10 @@ include: package:yumemi_lints/flutter/$flutterVersion/recommended.yaml
         path.join(rootDirPath, 'README.md'),
       ]).throwExceptionIfFailed();
 
-      // copy tmpDir contents to rootDirPath
+      // copy tempDir contents to rootDirPath
       Process.runSync(
         'cp',
-        ['-R', '${tmpDir.path}/.', rootDirPath],
+        ['-R', '${tempDir.path}/.', rootDirPath],
       ).throwExceptionIfFailed();
 
       return ExitStatus.success;
