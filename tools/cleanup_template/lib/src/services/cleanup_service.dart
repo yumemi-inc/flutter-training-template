@@ -27,6 +27,12 @@ class CleanupService {
   final FileSystem _fileSystem;
 
   ExitStatus call(Version flutterVersion) {
+    // setup fvm
+    Process.runSync(
+      'dart',
+      ['pub', 'global', 'activate', 'fvm'],
+    ).throwExceptionIfFailed();
+
     // flutter-training-practice-template/
     final rootDir = _fileSystem.directory(
       path.normalize(
