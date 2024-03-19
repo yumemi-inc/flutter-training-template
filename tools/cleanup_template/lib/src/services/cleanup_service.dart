@@ -138,16 +138,21 @@ include: package:yumemi_lints/flutter/$flutterVersion/recommended.yaml
         ['-R', '$githubTemplatesPath/.', tempDir.path],
       ).throwExceptionIfFailed();
 
-      // Delete anything except tempDir
-      Process.runSync('rm', [
-        '-rf',
-        path.join(rootDir.path, '.gitignore'),
-        path.join(rootDirPath, '.github/'),
-        path.join(rootDirPath, 'docs/'),
-        path.join(rootDirPath, 'packages/'),
-        path.join(rootDirPath, 'LICENSE'),
-        path.join(rootDirPath, 'README.md'),
-      ]).throwExceptionIfFailed();
+      // delete anything except tempDir
+      Process.runSync(
+        'rm',
+        [
+          '-rf',
+          ...[
+            '.gitignore',
+            '.github/',
+            'docs/',
+            'packages/',
+            'LICENSE',
+            'README.md',
+          ].map((e) => path.join(rootDir.path, e)),
+        ],
+      ).throwExceptionIfFailed();
 
       // copy tempDir contents to rootDirPath
       Process.runSync(
