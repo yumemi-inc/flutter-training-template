@@ -2,6 +2,7 @@ import 'dart:convert';
 
 import 'package:cleanup_template/src/clients/app_client.dart';
 import 'package:cleanup_template/src/models/flutter_sdk_release.dart';
+import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:pub_semver/pub_semver.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 
@@ -22,6 +23,7 @@ class FlutterSdkService {
 
   final AppClient _appClient;
 
+  @visibleForTesting
   Future<FlutterSdkRelease> getLatestFlutterSdkRelease() async {
     final url = Uri.https(
       'storage.googleapis.com',
