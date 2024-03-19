@@ -40,8 +40,7 @@ class CleanupService {
       ),
     );
 
-    // flutter-training-practice-template/tmp
-    final tmpDir = _fileSystem.directory('${rootDir.path}/tmp')..createSync();
+    final tmpDir = _fileSystem.systemTempDirectory;
 
     try {
       // install latest flutter sdk and setup
@@ -156,8 +155,6 @@ include: package:yumemi_lints/flutter/$flutterVersion/recommended.yaml
         ['-R', '${tmpDir.path}/.', rootDirPath],
       ).throwExceptionIfFailed();
 
-      // delete tmpDir
-      _fileSystem.directory(tmpDir.path).deleteSync(recursive: true);
       return ExitStatus.success;
     } on ProcessRunException catch (e) {
       print(e.message);
