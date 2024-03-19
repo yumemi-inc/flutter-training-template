@@ -1,5 +1,5 @@
 {
-  "dart.flutterSdkPath": ".fvm/versions/[[flutterVersion]]",
+  "dart.flutterSdkPath": ".fvm/versions/{{flutterVersion}}",
   "search.exclude": {
     "**/.fvm": true
   },
