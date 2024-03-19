@@ -1,10 +1,8 @@
 import 'dart:io';
 
-import 'package:cleanup_template/src/file_system.dart';
 import 'package:cleanup_template/src/models/exit_status.dart';
 import 'package:cleanup_template/src/services/cleanup_service.dart';
 import 'package:cleanup_template/src/services/flutter_sdk_service.dart';
-import 'package:file/local.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:riverpod/riverpod.dart';
 
@@ -17,13 +15,7 @@ Future<ExitStatus> run() async {
     return exitStatus;
   }
 
-  final fileSystem = LocalFileSystem();
-
-  final container = ProviderContainer(
-    overrides: [
-      fileSystemProvider.overrideWithValue(fileSystem),
-    ],
-  );
+  final container = ProviderContainer();
 
   try {
     final exitStatus = await cleanupTemplate(container);

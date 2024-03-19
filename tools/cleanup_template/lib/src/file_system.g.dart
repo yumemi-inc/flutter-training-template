@@ -8,15 +8,12 @@ part of 'file_system.dart';
 // RiverpodGenerator
 // **************************************************************************
 
-String _$fileSystemHash() => r'c1ac781f4b3a827724c50969cd376475c63177a1';
+String _$fileSystemHash() => r'599c2fc26ae187d5c12fee2f5e48522e59609c32';
 
 /// See also [fileSystem].
 @ProviderFor(fileSystem)
 final fileSystemProvider = AutoDisposeProvider<FileSystem>.internal(
-  (_) => throw UnsupportedError(
-    'The provider "fileSystemProvider" is expected to get overridden/scoped, '
-    'but was accessed without an override.',
-  ),
+  fileSystem,
   name: r'fileSystemProvider',
   debugGetCreateSourceHash:
       const bool.fromEnvironment('dart.vm.product') ? null : _$fileSystemHash,
