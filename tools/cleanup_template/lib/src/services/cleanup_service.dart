@@ -131,8 +131,7 @@ include: package:yumemi_lints/flutter/$flutterVersion/recommended.yaml
 ''');
 
       // copy templates contents to tempDir
-      final rootDirPath = rootDir.path;
-      final githubTemplatesPath = path.join(rootDirPath, '.github/templates');
+      final githubTemplatesPath = path.join(rootDir.path, '.github/templates');
       Process.runSync(
         'cp',
         ['-R', '$githubTemplatesPath/.', tempDir.path],
@@ -154,10 +153,10 @@ include: package:yumemi_lints/flutter/$flutterVersion/recommended.yaml
         ],
       ).throwExceptionIfFailed();
 
-      // copy tempDir contents to rootDirPath
+      // copy tempDir contents to rootDir
       Process.runSync(
         'cp',
-        ['-R', '${tempDir.path}/.', rootDirPath],
+        ['-R', '${tempDir.path}/.', rootDir.path],
       ).throwExceptionIfFailed();
 
       // delete tools directory
