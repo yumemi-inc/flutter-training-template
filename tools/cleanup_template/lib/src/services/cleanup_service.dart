@@ -1,3 +1,4 @@
+import 'dart:convert';
 import 'dart:io';
 
 import 'package:cleanup_template/src/file_system.dart';
@@ -130,8 +131,19 @@ class CleanupService {
 include: package:yumemi_lints/flutter/$flutterVersion/recommended.yaml
 ''');
 
-      // copy templates contents to tempDir
+      // setting dart.flutterSdkPath
       final githubTemplatesPath = path.join(rootDir.path, '.github/templates');
+      final settingsJson = _fileSystem.file(
+        path.join(githubTemplatesPath, '.vscode/settings.json'),
+      );
+      final decodedJson = jsonDecode(
+        settingsJson.readAsStringSync(),
+      ) as Map<String, dynamic>;
+      decodedJson['dart.flutterSdkPath'] = '.fvm/versions/$flutterVersion';
+      final formattedJson = JsonEncoder.withIndent('  ').convert(decodedJson);
+      settingsJson.writeAsStringSync(formattedJson);
+
+      // copy templates contents to tempDir
       Process.runSync(
         'cp',
         ['-R', '$githubTemplatesPath/.', tempDir.path],
