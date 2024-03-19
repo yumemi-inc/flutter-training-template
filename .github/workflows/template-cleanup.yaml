@@ -46,9 +46,6 @@ jobs:
         shell: bash
         working-directory: tools/cleanup_template
 
-      - name: Delete tools directory
-        run: rm -rf tools
-
       - name: Commit files
         run: |
           git config --local user.email "action@github.com"

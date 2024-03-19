@@ -160,6 +160,15 @@ include: package:yumemi_lints/flutter/$flutterVersion/recommended.yaml
         ['-R', '${tempDir.path}/.', rootDirPath],
       ).throwExceptionIfFailed();
 
+      // delete tools directory
+      final toolsDir = _fileSystem.directory(
+        path.join(
+          rootDir.path,
+          'tools',
+        ),
+      );
+      toolsDir.deleteSync(recursive: true);
+
       return ExitStatus.success;
     } on ProcessRunException catch (e) {
       print(e.message);
