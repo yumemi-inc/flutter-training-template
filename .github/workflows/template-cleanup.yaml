@@ -30,60 +30,21 @@ jobs:
       # - name: Create issues from challenges
       #   uses: ./.github/actions/create-issues-from-challenges
 
-      - name: Cleanup
+      # https://github.com/dart-lang/setup-dart
+      - name: Set up dart
+        uses: dart-lang/setup-dart@v1
+        with:
+          sdk: "3.3.0" # See: tools/cleanup_template/pubspec.yaml
+
+      - name: Install dependencies
+        run: dart pub get
         shell: bash
-        run: |
-          # Make tmp dir and move work dir to tmp
-          mkdir "tmp" && cd tmp || exit
-          
-          # Install fvm
-          eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
-          brew tap leoafarias/fvm
-          brew install fvm
-          
-          # Install & Setup Flutter
-          flutterLatestVersion=$(fvm releases | grep -o -E "v?[0-9]+\.[0-9]+\.[0-9]+\s+stable" | sed -e "s/[ ]*stable//g")
-          fvm install "$flutterLatestVersion"
-          fvm use "$flutterLatestVersion" --force
-          
-          # Create Flutter Project
-          fvm flutter create \
-            -t app \
-            --empty \
-            -i swift \
-            -a kotlin \
-            --platforms ios,android \
-            --org jp.co.yumemi \
-            --project-name flutter_training \
-            .
-          
-          # Add lints to dev_dependencies
-          fvm flutter pub add dev:yumemi_lints
-          fvm flutter pub remove flutter_lints
-          
-          # Override the analysis_options.yaml
-          cat <<EOF > analysis_options.yaml
-          # https://pub.dev/packages/yumemi_lints
-          include: package:yumemi_lints/flutter/$flutterLatestVersion/recommended.yaml
-          EOF
-          
-          # Move work dir to project root
-          cd ..
-          
-          # Copy templates
-          cp -R .github/templates/. tmp
-          
-          # Delete anything except tmp dir
-          rm -rf \
-            .github \
-            docs \
-            packages \
-            .gitignore \
-            LICENSE \
-            README.md
-          
-          # Move new training project to project root
-          mv -f tmp/* tmp/.[^\.]* ./ && rm -rf tmp
+        working-directory: tools/cleanup_template
+
+      - name: Run cleanup_template
+        run: dart run bin/cleanup_template.dart
+        shell: bash
+        working-directory: tools/cleanup_template
 
       - name: Commit files
         run: |

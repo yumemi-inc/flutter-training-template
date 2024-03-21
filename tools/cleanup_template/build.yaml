@@ -1,0 +1,20 @@
+targets:
+  $default:
+    builders:
+      # https://github.com/dart-lang/source_gen#ignore_for_file
+      source_gen:combining_builder:
+        options:
+          ignore_for_file:
+            - type=lint
+            - duplicate_ignore
+      json_serializable:
+        generate_for:
+          include:
+            - lib/src/models/*.dart
+        options:
+          # json のデシリアライズ時に発生する Exception を CheckedFromJsonException にまとめる
+          checked: true
+      freezed:
+        generate_for:
+          include:
+            - lib/src/models/*.dart
