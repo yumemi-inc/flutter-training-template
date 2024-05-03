@@ -682,7 +682,7 @@ packages:
     source: hosted
     version: "3.1.2"
   yumemi_lints:
-    dependency: "direct main"
+    dependency: "direct dev"
     description:
       name: yumemi_lints
       sha256: "51aefbdf37ec2096f0440f91627735c10a1eaacc7cd3e34f372e1e91a8e146f4"
