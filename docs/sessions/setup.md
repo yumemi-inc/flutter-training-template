@@ -32,6 +32,10 @@
     - [ ] マージ前にブランチ最新化必須
     - [ ] ステータスチェック `flutter test` `check` を追加
 
+## 注意事項
+
+- `yumemi_lints` が Flutter SDK の最新バージョンをサポートおらずエラーが発生してしまう場合があります。詳しくは [Error occurs when yumemi_lints does not support the latest version of Flutter SDK] をご覧ください。
+
 ## 参考資料
 
 - [コラボレーターを個人リポジトリに招待する]
@@ -45,6 +49,8 @@
 [fvm]: https://fvm.app/
 
 [review-assign.yaml]: https://github.com/yumemi-inc/flutter-training-template/blob/main/.github/templates/.github/workflows-templates/review-assign.yaml#L8
+
+[Error occurs when yumemi_lints does not support the latest version of Flutter SDK]: https://github.com/yumemi-inc/flutter-training-template/wiki/Error-occurs-when-yumemi_lints-does-not-support-the-latest-version-of-Flutter-SDK
 
 [コラボレーターを個人リポジトリに招待する]: https://docs.github.com/ja/account-and-profile/setting-up-and-managing-your-personal-account-on-github/managing-access-to-your-personal-repositories/inviting-collaborators-to-a-personal-repository#inviting-a-collaborator-to-a-personal-repository
 
