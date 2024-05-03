@@ -1,4 +1,4 @@
-include: package:yumemi_lints/dart/3.3.0/recommended.yaml
+include: package:yumemi_lints/dart/3.3/recommended.yaml
 
 analyzer:
   plugins:
