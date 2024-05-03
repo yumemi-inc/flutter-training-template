@@ -120,6 +120,19 @@ class CleanupService {
         workingDirectory: tempDir.path,
       ).throwExceptionIfFailed();
 
+      // add constraints for the Flutter SDK
+      final pubspecPath = path.join(tempDir.path, 'pubspec.yaml');
+      final pubspecFlie = _fileSystem.file(pubspecPath);
+      final pubspecFileContent = pubspecFlie.readAsStringSync();
+      final pubspecFileNewContent = pubspecFileContent.replaceFirstMapped(
+        RegExp(r'environment:\n  sdk:.+\n'),
+        (match) {
+          final all = match.group(0)!;
+          return '$all  flutter: ^$flutterVersion\n';
+        },
+      );
+      pubspecFlie.writeAsStringSync(pubspecFileNewContent);
+
       // override analysis_options.yaml
       Process.runSync(
         'fvm',
