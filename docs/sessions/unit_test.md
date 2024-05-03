@@ -22,11 +22,11 @@ Flutter のテストは次の３つに分類されます。
 
 テストを書くときは、依存しているものは何で、前提条件と完了条件は何なのかを明確にすることが重要です。
 
-また、[Mockito] を使って依存しているものをモックすることで、様々なテストケースに柔軟かつ簡単に対応できるようになります。
+また、[mockito | REAMDME] を使って依存しているものをモックすることで、様々なテストケースに柔軟かつ簡単に対応できるようになります。
 
 ## 参考資料
 
-- [Riverpod Testing]
+- [Testing your providers]
 
 <!-- Links -->
 
@@ -38,6 +38,6 @@ Flutter のテストは次の３つに分類されます。
 
 [yumemi_weather]: https://yumemi-inc.github.io/flutter-training-template/
 
-[Mockito]: https://docs.flutter.dev/cookbook/testing/unit/mocking
+[mockito | REAMDME]: https://pub.dev/packages/mockito
 
-[Riverpod Testing]: https://riverpod.dev/docs/essentials/testing
+[Testing your providers]: https://riverpod.dev/docs/essentials/testing
