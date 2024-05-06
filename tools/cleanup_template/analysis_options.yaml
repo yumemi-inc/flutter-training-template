@@ -1,4 +1,4 @@
-include: package:yumemi_lints/dart/3.3.0/recommended.yaml
+include: package:yumemi_lints/dart/3.3/recommended.yaml
 
 analyzer:
   plugins:
@@ -6,3 +6,7 @@ analyzer:
   errors:
     # https://pub.dev/packages/freezed
     invalid_annotation_target: ignore
+
+linter:
+  rules:
+    avoid_print: false

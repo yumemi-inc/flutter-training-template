@@ -120,15 +120,30 @@ class CleanupService {
         workingDirectory: tempDir.path,
       ).throwExceptionIfFailed();
 
-      // override analysis_options.yaml
-      final analysisOptionsPath = path.join(
-        tempDir.path,
-        'analysis_options.yaml',
+      // add constraints for the Flutter SDK
+      final pubspecPath = path.join(tempDir.path, 'pubspec.yaml');
+      final pubspecFlie = _fileSystem.file(pubspecPath);
+      final pubspecFileContent = pubspecFlie.readAsStringSync();
+      final pubspecFileNewContent = pubspecFileContent.replaceFirstMapped(
+        RegExp(r'environment:\n  sdk:.+\n'),
+        (match) {
+          final all = match.group(0)!;
+          return '$all  flutter: ^$flutterVersion\n';
+        },
       );
-      _fileSystem.file(analysisOptionsPath).writeAsStringSync('''
-# https://pub.dev/packages/yumemi_lints
-include: package:yumemi_lints/flutter/$flutterVersion/recommended.yaml
-''');
+      pubspecFlie.writeAsStringSync(pubspecFileNewContent);
+
+      // override analysis_options.yaml
+      Process.runSync(
+        'fvm',
+        [
+          'dart',
+          'run',
+          'yumemi_lints',
+          'update',
+        ],
+        workingDirectory: tempDir.path,
+      ).throwExceptionIfFailed();
 
       // setting dart.flutterSdkPath
       final githubTemplatesPath = path.join(rootDir.path, '.github/templates');

@@ -34,20 +34,20 @@ class FlutterSdkService {
 
     final json = jsonDecode(responseBody);
     if (json is! Map<String, dynamic>) {
-      throw FormatException(
+      throw const FormatException(
         'The type of `json` should be `Map<String, dynamic>`.',
       );
     }
     final releases = json['releases'];
     if (releases is! List<dynamic>) {
-      throw FormatException(
+      throw const FormatException(
         'The type of `releases` should be `List<dynamic>`.',
       );
     }
 
     return releases.map((release) {
       if (release is! Map<String, dynamic>) {
-        throw FormatException(
+        throw const FormatException(
           'The type of `release` should be `Map<String, dynamic>`.',
         );
       }

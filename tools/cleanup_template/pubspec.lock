@@ -213,10 +213,10 @@ packages:
     dependency: "direct main"
     description:
       name: file
-      sha256: "5fc22d7c25582e38ad9a8515372cd9a93834027aacf1801cf01164dac0ffa08c"
+      sha256: "1b92bec4fc2a72f59a8e15af5f52cd441e4a7860b49499d69dfa817af20e925d"
       url: "https://pub.dev"
     source: hosted
-    version: "7.0.0"
+    version: "6.1.4"
   fixnum:
     dependency: transitive
     description:
@@ -682,12 +682,12 @@ packages:
     source: hosted
     version: "3.1.2"
   yumemi_lints:
-    dependency: "direct main"
+    dependency: "direct dev"
     description:
       name: yumemi_lints
-      sha256: "51aefbdf37ec2096f0440f91627735c10a1eaacc7cd3e34f372e1e91a8e146f4"
+      sha256: "073a9a10e8f4b7024cc3f00ccde00455fec6f60326f4e87639feb9e4ce8ab54b"
       url: "https://pub.dev"
     source: hosted
-    version: "1.7.0"
+    version: "2.0.0"
 sdks:
   dart: ">=3.3.0 <4.0.0"
