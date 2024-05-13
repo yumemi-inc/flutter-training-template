@@ -24,7 +24,7 @@
 
 - 各 Session を Issue に登録
 - 各 Challenge を Issue に登録
-- fvm を利用して、最新安定板の Flutter SDK で Android・iOS 用のプロジェクトを作成
+- fvm を利用して、最新安定版の Flutter SDK で Android・iOS 用のプロジェクトを作成
 - lints を導入
 - [templates] 配下のファイルを上書きコピー
 - 不要なファイルを削除してコミット作成してプッシュ
